@@ -1,0 +1,23 @@
+/* Set black background color, white text and some padding */
+#myFooter {
+    
+    font-size: 1.6rem;
+    background-color:#a4acc4!important;
+    position: fixed;
+    margin-bottom: 0;
+    padding-bottom: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+	min-height: 30px!important;
+    text-align: center;
+}
+#myFooter span{
+    color : black!important;
+}
+
+
+/* footer span{
+ right: auto;
+display: inline;
+} */

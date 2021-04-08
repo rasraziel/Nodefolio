@@ -1,0 +1,24 @@
+{
+  "name": "nodefolio",
+  "version": "1.0.0",
+  "description": "Portfolio project with Node.js",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rasraziel/Nodefolio.git"
+  },
+  "author": "Elias Martidis",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/rasraziel/Nodefolio/issues"
+  },
+  "homepage": "https://github.com/rasraziel/Nodefolio#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "nodemon": "^2.0.7",
+    "serve-favicon": "^2.5.0"
+  }
+}

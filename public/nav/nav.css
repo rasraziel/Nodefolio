@@ -1,0 +1,71 @@
+
+
+ /* Remove the navbar's default margin-bottom and rounded borders */ 
+ .navbar {
+  margin-bottom: 0;
+  border-radius: 0;
+  background-color: #a4acc4!important;
+  max-height: fit-content!important;
+}
+
+.navbar-nav{
+     flex: 1!important;
+    margin: auto !important;
+    display: flex!important;
+    justify-content: space-between!important;
+}
+
+
+
+
+.navbar-inverse .navbar-nav>li{
+    font-size: 2em!important;
+}
+
+
+.navbar-inverse .navbar-nav>li>a{
+    color: black!important;
+}
+
+.navbar-inverse .navbar-nav>li>a:hover{
+    color: crimson!important;
+}
+
+
+.logo{
+  height: 6rem;
+  width: 13rem;
+  margin-top: -2rem;
+  margin-left: -1.9rem;
+  margin-right: -1.5rem;
+  position: absolute;
+}
+
+
+ul.navbar-nav li.active a:hover,
+ul.navbar-nav li.active a:focus,
+ul.navbar-nav li.active a:active, 
+ul.navbar-nav li.active a:target,
+ul.navbar-nav li.active a{
+  color: crimson!important;
+}
+
+.navbar-inverse .navbar-nav>.active>a, .navbar-inverse .navbar-nav>.active>a:focus, .navbar-inverse .navbar-nav>.active>a:hover {
+    background-color: transparent!important;
+}
+
+/* .background {
+  max-height: 35rem!important;
+  max-width: 70rem!important;
+  display:inline-flex;
+  position: absolute;
+} */
+
+
+
+
+
+
+
+
+ 
