@@ -65,3 +65,5 @@ const server = app.listen(port, (error) => {
     }
     console.log("Server is running on port", server.address().port);
 });
+
+console.log(process.env.LOGIN + " sends emails");
