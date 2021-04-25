@@ -1,8 +1,9 @@
 const router = require("express").Router();
 const nodemailer = require('nodemailer');
+const smtpTransport = require('nodemailer-smtp-transport');
 
 
-const transporter = nodemailer.createTransport({
+const transporter = nodemailer.createTransport(smtpTransport({
     service: 'gmail',
     host:'smtp.gmail.com',
     port: 25,
@@ -10,7 +11,7 @@ const transporter = nodemailer.createTransport({
       user: process.env.LOGIN,
       pass: process.env.PASS
     }
-  });
+  }));
   
 
 router.post("/contact/message", (req, res) => {
