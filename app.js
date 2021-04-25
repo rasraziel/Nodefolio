@@ -3,6 +3,8 @@ const favicon = require('serve-favicon');
 const express = require('express');
 const bodyParser = require('body-parser');
 const app = express();
+const contactRouter = require("./routes/contact.js");
+const projectRouter = require("./routes/projects.js");
 
 port = process.env.PORT || 8080
 
@@ -17,6 +19,8 @@ app.use(express.static(__dirname + '/public/resume'));
 app.use(express.static(__dirname + '/public/projects'));
 app.use(express.static(__dirname + '/public/global'));
 app.use(favicon(__dirname + '/public/images/favicon.ico'));
+app.use(contactRouter.router);
+app.use(projectRouter.router);
 
 const nav = fs.readFileSync(__dirname + "/public/nav/nav.html", "utf-8");
 const footer = fs.readFileSync(__dirname + "/public/footer/footer.html", "utf-8");
@@ -46,14 +50,14 @@ app.get('/contact', (req, res)=>{
     res.send(importsContact + nav + contact + footer + `</body></html>`);
 });
 
-app.post('/send', function(req, res) {
+// app.post('/contact/message', function(req, res) {
     // res.send('You sent the name "' + req.body.name + '".');
-    console.log(req.body);
-    const name = req.body.name;
-    const email = req.body.email;
-    const subject = req.body.subject;
-    const message = req.body.message;
-  });
+//     console.log(req.body);
+//     const name = req.body.name;
+//     const email = req.body.email;
+//     const subject = req.body.subject;
+//     const message = req.body.message;
+//   });
 
 const server = app.listen(port, (error) => {
     if (error) {
